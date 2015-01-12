@@ -1,0 +1,4 @@
+C:\Users\Ricardo\documents\visual studio 2010\Projects\exercicio01\exercicio01\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Users\Ricardo\documents\visual studio 2010\Projects\exercicio01\exercicio01\obj\x86\Release\exercicio01.Properties.Resources.resources
+C:\Users\Ricardo\documents\visual studio 2010\Projects\exercicio01\exercicio01\obj\x86\Release\GenerateResource.read.1.tlog
+C:\Users\Ricardo\documents\visual studio 2010\Projects\exercicio01\exercicio01\obj\x86\Release\GenerateResource.write.1.tlog
