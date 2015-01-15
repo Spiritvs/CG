@@ -190,7 +190,7 @@ namespace exercicio01
         }
 
         //aplicar transformações de translação ao objecto
-        private ArrayList transforma(float translacaoX, float translacaoY, float translacaoZ)
+        private ArrayList transforma(float translacaoX, float translacaoY, float translacaoZ, float rodaX, float rodaY, float rodaZ, float camara, float escala, int cam)
         {
            ArrayList res = new ArrayList(vertices.Count);
 
@@ -203,14 +203,28 @@ namespace exercicio01
                 
               }
             metodosMatriz3D.Matriz3D mTrans = metodosMatriz3D.Matriz3D.translacao(translacaoX, translacaoY, translacaoZ);
-           //Matriz3D mProj = Matriz3D.projParalela();
-           metodosMatriz3D.Matriz3D mProj = metodosMatriz3D.Matriz3D.projPerspectiva(3); // a câmara está em Z=-3
-          
+            metodosMatriz3D.Matriz3D mRodaX = metodosMatriz3D.Matriz3D.rotacaoX(rodaX);
+            metodosMatriz3D.Matriz3D mRodaY = metodosMatriz3D.Matriz3D.rotacaoY(rodaY);
+            metodosMatriz3D.Matriz3D mRodaZ = metodosMatriz3D.Matriz3D.rotacaoZ(rodaZ);
+            metodosMatriz3D.Matriz3D mEscala = metodosMatriz3D.Matriz3D.escala(escala, escala, escala);
+            metodosMatriz3D.Matriz3D mProj = new metodosMatriz3D.Matriz3D();
+            if (cam == 1)
+            {
+                mProj = metodosMatriz3D.Matriz3D.projParalela();
+            }
+            if (cam == 0)
+            {
+                mProj = metodosMatriz3D.Matriz3D.projPerspectiva(camara);
+            } // a câmara está em Z=-3
 
             for (int i = 0; i < res.Count; i++)
             {
                 Vector3D p = (Vector3D)res[i];
                 p.geraCoordHomogeneas(mTrans);
+                p.geraCoordHomogeneas(mRodaX);
+                p.geraCoordHomogeneas(mRodaY);
+                p.geraCoordHomogeneas(mRodaZ);
+                p.geraCoordHomogeneas(mEscala);
                 p.geraCoordCartesianas(mProj);
             }
             
@@ -239,10 +253,11 @@ namespace exercicio01
         } 
 
         // desenha as faces do objecto
-        public void desenha(Graphics g, float translacaoX, float translacaoY, float translacaoZ)
+        public void desenha(Graphics g, float translacaoX, float translacaoY, float translacaoZ, float rodaX, float rodaY, float rodaZ, float camara, float escala, int cam)
         {
+
            
-          ArrayList vTransf=transforma(translacaoX, translacaoY, translacaoZ); // calcula os novos vértices
+          ArrayList vTransf=transforma(translacaoX, translacaoY, translacaoZ, rodaX, rodaY, rodaZ, camara, escala, cam); // calcula os novos vértices
           ArrayList faces=geraFaces(vTransf); // gera as novas faces com base nos novos vértices
             
           for (int i = 0; i < faces.Count; i++) // percorre face a face e desenha 

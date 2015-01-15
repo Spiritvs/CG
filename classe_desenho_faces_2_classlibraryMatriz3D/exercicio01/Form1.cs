@@ -18,10 +18,13 @@ namespace exercicio01
         Pen pen1;
         SolidBrush brush1;
         string nomeFicheiro;
+        int cam = 0;
+
  
         public Form1()
         {
             InitializeComponent();
+            camara.Value = 500;
            
             // criar e inicializar objecto
             int largura_box= this.BoxDesenho.Width;
@@ -39,7 +42,7 @@ namespace exercicio01
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            perspectiva.Checked = true;
         }
 
         private void BoxDesenho_Paint(object sender, PaintEventArgs e)
@@ -47,10 +50,12 @@ namespace exercicio01
             Graphics g = e.Graphics;
            
             if (obj != null)
-                     
-                obj.desenha(g, (float)(transX.Value), (float)(transY.Value), (float)(transZ.Value));
+                obj.desenha(g, (float)(transX.Value), (float)(transY.Value), (float)(transZ.Value),
+                    (float)(rodaX.Value), (float)(rodaY.Value), (float)(rodaZ.Value),
+                    (float)(camara.Value), (float)(escala.Value), cam);
            
         }
+
 
         private void transX_ValueChanged(object sender, EventArgs e)
         {
@@ -66,6 +71,47 @@ namespace exercicio01
         {
             this.BoxDesenho.Invalidate();
         }
+
+        private void rodaX_ValueChanged(object sender, EventArgs e)
+        {
+            this.BoxDesenho.Invalidate();
+        }
+
+        private void rodaY_ValueChanged(object sender, EventArgs e)
+        {
+            this.BoxDesenho.Invalidate();
+        }
+
+        private void rodaZ_ValueChanged(object sender, EventArgs e)
+        {
+            this.BoxDesenho.Invalidate();
+        }
+
+        private void camara_ValueChanged(object sender, EventArgs e)
+        {
+            this.BoxDesenho.Invalidate();
+        }
+
+        private void escala_ValueChanged(object sender, EventArgs e)
+        {
+            this.BoxDesenho.Invalidate();
+        }
+
+        private void camara_CheckedChanged(object sender, EventArgs e)
+        {
+            if (perspectiva.Checked)
+            {
+                cam = 0;
+                //System.Windows.Forms.MessageBox.Show("0");
+            }
+            if (paralela.Checked)
+            {
+                cam = 1;
+                //System.Windows.Forms.MessageBox.Show("1");
+            }
+            this.BoxDesenho.Invalidate();
+        }
+
 
        private void botCorContorno_Click(object sender, EventArgs e)
         {
@@ -98,6 +144,18 @@ namespace exercicio01
             }
 
 
+        }
+
+        private void reset_Click(object sender, EventArgs e)
+        {
+            transX.Value = 0;
+            transY.Value = 0;
+            transZ.Value = 0;
+            rodaX.Value = 0;
+            rodaY.Value = 0;
+            rodaZ.Value = 0;
+            this.BoxDesenho.Invalidate();
+            
         }
 
         private void Form1_Resize(object sender, EventArgs e)
@@ -134,7 +192,7 @@ namespace exercicio01
             Stream str;
             OpenFileDialog fileDialog = new OpenFileDialog();
 
-            fileDialog.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*";
+            fileDialog.Filter = "Obj files (*.obj)|*.obj|All files (*.*)|*.*";
             fileDialog.RestoreDirectory = true;
             
             if (fileDialog.ShowDialog()==DialogResult.OK)
@@ -207,6 +265,19 @@ namespace exercicio01
                 obj.setCores(pen1, brush1);
             }
         }
+
+
+
+
+       
+
+     
+
+ 
+
+
+
+
       
     }
 }
