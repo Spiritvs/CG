@@ -10,7 +10,7 @@ namespace exercicio01
     public class Vector3D
     {
         //------DADOS da classe ----------------------
-        float x, y, z, w;
+        public float x, y, z, w;
 
         //--------- MÉTODOS --------------------------
 
@@ -126,6 +126,7 @@ namespace exercicio01
         //Produto vectorial dos pontos
         public static Vector3D operator ^(Vector3D v1, Vector3D v2)
         {
+
             Vector3D r = new Vector3D();
             r.x = (v1.y * v2.z - v2.y * v1.z);
             r.y = r.y = (v1.z * v2.x - v1.x * v2.z);

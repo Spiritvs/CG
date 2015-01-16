@@ -220,10 +220,10 @@ namespace exercicio01
             for (int i = 0; i < res.Count; i++)
             {
                 Vector3D p = (Vector3D)res[i];
-                p.geraCoordHomogeneas(mTrans);
                 p.geraCoordHomogeneas(mRodaX);
                 p.geraCoordHomogeneas(mRodaY);
                 p.geraCoordHomogeneas(mRodaZ);
+                p.geraCoordHomogeneas(mTrans);
                 p.geraCoordHomogeneas(mEscala);
                 p.geraCoordCartesianas(mProj);
             }
@@ -233,30 +233,48 @@ namespace exercicio01
         
         private ArrayList geraFaces(ArrayList verticesTransf)
         {
-
             ArrayList faces = new ArrayList();
+            Vector3D a = new Vector3D();
+            Vector3D b = new Vector3D();
+            Vector3D normal = new Vector3D();
+            float zmedio;
             int k = 0;
-           
+            Face f = new Face();
             for (int i = 0; i < numvPorFace.Count; i++)
             {
-                Face f = new Face();
                
                 for (int j = 0; j < (int)numvPorFace[i]; j++)
                 {
                     Vector3D p = (Vector3D)verticesTransf[(int)indicesFaces[k++]];
                     f.saveVertice(p);
                 }
-                faces.Add(f);
-               
+                  normal = f.calcNormal();
+                if(normal.z >= 0)
+                  faces.Add(f);
             }
+
+            for (int i = faces.Count - 1; i >= 1; i--)
+            {
+                for (int j = 0; j < i; j++)
+                {
+                    if (((Face)faces[j]).calcZMedio() > vetor[j + 1])
+                    {
+
+                        aux = vetor[j];
+                        vetor[j] = vetor[j + 1];
+                        vetor[j + 1] = aux;
+
+                    }
+                }
+            }
+            zmedio = f.calcZMedio();
+            System.Windows.Forms.MessageBox.Show("Z-Medio: " + zmedio);
             return faces;
         } 
 
         // desenha as faces do objecto
         public void desenha(Graphics g, float translacaoX, float translacaoY, float translacaoZ, float rodaX, float rodaY, float rodaZ, float camara, float escala, int cam)
         {
-
-           
           ArrayList vTransf=transforma(translacaoX, translacaoY, translacaoZ, rodaX, rodaY, rodaZ, camara, escala, cam); // calcula os novos vértices
           ArrayList faces=geraFaces(vTransf); // gera as novas faces com base nos novos vértices
             
@@ -267,7 +285,7 @@ namespace exercicio01
                  g.FillPolygon(brushPreenchimento, (PointF[])f.getVertices2D(centroProjeccaoX,centroProjeccaoY)); // se escolheu wireframe não preenche
             g.DrawPolygon(penContorno, (PointF[])f.getVertices2D(centroProjeccaoX,centroProjeccaoY)); //desenha sempre a linha
          }
-
+          //System.Windows.Forms.MessageBox.Show("Nº Faces: " + faces.Count);
  
         }
         

@@ -143,3 +143,12 @@ C:\Users\Ricardo\Desktop\CG\classe_desenho_faces_2_classlibraryMatriz3D\exercici
 C:\Users\Ricardo\Desktop\CG\classe_desenho_faces_2_classlibraryMatriz3D\exercicio01\obj\x86\Debug\exercicio01.Form1.resources
 C:\Users\Ricardo\Desktop\CG\classe_desenho_faces_2_classlibraryMatriz3D\exercicio01\obj\x86\Debug\exercicio01.Properties.Resources.resources
 C:\Users\Ricardo\Desktop\CG\classe_desenho_faces_2_classlibraryMatriz3D\exercicio01\obj\x86\Debug\exercicio01.csproj.GenerateResource.Cache
+C:\Users\Ricardo\Desktop\CG-master\classe_desenho_faces_2_classlibraryMatriz3D\exercicio01\obj\x86\Debug\exercicio01.exe
+C:\Users\Ricardo\Desktop\CG-master\classe_desenho_faces_2_classlibraryMatriz3D\exercicio01\obj\x86\Debug\exercicio01.pdb
+C:\Users\Ricardo\Desktop\CG-master\classe_desenho_faces_2_classlibraryMatriz3D\exercicio01\bin\Debug\exercicio01.exe
+C:\Users\Ricardo\Desktop\CG-master\classe_desenho_faces_2_classlibraryMatriz3D\exercicio01\bin\Debug\exercicio01.pdb
+C:\Users\Ricardo\Desktop\CG-master\classe_desenho_faces_2_classlibraryMatriz3D\exercicio01\bin\Debug\metodosMatriz3D.pdb
+C:\Users\Ricardo\Desktop\CG-master\classe_desenho_faces_2_classlibraryMatriz3D\exercicio01\obj\x86\Debug\exercicio01.csprojResolveAssemblyReference.cache
+C:\Users\Ricardo\Desktop\CG-master\classe_desenho_faces_2_classlibraryMatriz3D\exercicio01\obj\x86\Debug\exercicio01.Form1.resources
+C:\Users\Ricardo\Desktop\CG-master\classe_desenho_faces_2_classlibraryMatriz3D\exercicio01\obj\x86\Debug\exercicio01.Properties.Resources.resources
+C:\Users\Ricardo\Desktop\CG-master\classe_desenho_faces_2_classlibraryMatriz3D\exercicio01\obj\x86\Debug\exercicio01.csproj.GenerateResource.Cache
