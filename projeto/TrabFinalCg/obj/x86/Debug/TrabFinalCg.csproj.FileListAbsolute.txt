@@ -1,0 +1,21 @@
+C:\Users\Ricardo\Desktop\TrabFinalCg\exercicio01\bin\Debug\TrabFinalCg.exe
+C:\Users\Ricardo\Desktop\TrabFinalCg\exercicio01\bin\Debug\TrabFinalCg.pdb
+C:\Users\Ricardo\Desktop\TrabFinalCg\exercicio01\bin\Debug\metodosMatriz3D.pdb
+C:\Users\Ricardo\Desktop\TrabFinalCg\exercicio01\obj\x86\Debug\TrabFinalCg.Properties.Resources.resources
+C:\Users\Ricardo\Desktop\TrabFinalCg\exercicio01\obj\x86\Debug\TrabFinalCg.csproj.GenerateResource.Cache
+C:\Users\Ricardo\Desktop\TrabFinalCg\exercicio01\obj\x86\Debug\TrabFinalCg.exe
+C:\Users\Ricardo\Desktop\TrabFinalCg\exercicio01\obj\x86\Debug\TrabFinalCg.pdb
+C:\Users\Ricardo\Desktop\TrabFinalCg\exercicio01\obj\x86\Debug\TrabFinalCg.Form1.resources
+C:\Users\Ricardo\Desktop\TrabFinalCg\TrabFinalCg\obj\x86\Debug\TrabFinalCg.exe
+C:\Users\Ricardo\Desktop\TrabFinalCg\TrabFinalCg\obj\x86\Debug\TrabFinalCg.pdb
+C:\Users\Ricardo\Desktop\TrabFinalCg\TrabFinalCg\bin\Debug\TrabFinalCg.exe
+C:\Users\Ricardo\Desktop\TrabFinalCg\TrabFinalCg\bin\Debug\TrabFinalCg.pdb
+C:\Users\Ricardo\Desktop\TrabFinalCg\TrabFinalCg\bin\Debug\metodosMatriz3D.pdb
+C:\Users\Ricardo\Desktop\TrabFinalCg\TrabFinalCg\obj\x86\Debug\TrabFinalCg.csprojResolveAssemblyReference.cache
+C:\Users\Ricardo\Desktop\TrabFinalCg\TrabFinalCg\obj\x86\Debug\TrabFinalCg.Form1.resources
+C:\Users\Ricardo\Desktop\TrabFinalCg\TrabFinalCg\obj\x86\Debug\TrabFinalCg.Properties.Resources.resources
+C:\Users\Ricardo\Desktop\TrabFinalCg\TrabFinalCg\obj\x86\Debug\TrabFinalCg.csproj.GenerateResource.Cache
+C:\Users\Ricardo\Desktop\Nova pasta\projeto\TrabFinalCg\obj\x86\Debug\TrabFinalCg.exe
+C:\Users\Ricardo\Desktop\Nova pasta\projeto\TrabFinalCg\obj\x86\Debug\TrabFinalCg.pdb
+C:\Users\Ricardo\Desktop\Trb_CG_1415_ManuelRicardoSa11228\projeto\TrabFinalCg\obj\x86\Debug\TrabFinalCg.exe
+C:\Users\Ricardo\Desktop\Trb_CG_1415_ManuelRicardoSa11228\projeto\TrabFinalCg\obj\x86\Debug\TrabFinalCg.pdb

@@ -1,0 +1,3 @@
+C:\Users\Ricardo\Desktop\TrabFinalCg\exercicio01\obj\x86\Release\exercicio01.Form1.resources
+C:\Users\Ricardo\Desktop\TrabFinalCg\exercicio01\obj\x86\Release\TrabFinalCg.Properties.Resources.resources
+C:\Users\Ricardo\Desktop\TrabFinalCg\exercicio01\obj\x86\Release\TrabFinalCg.csproj.GenerateResource.Cache
